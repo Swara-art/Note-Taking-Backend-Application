@@ -2,11 +2,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from fastapi import FastAPI
-from routes.create import router
+
+from routes.create import router as create_router
+from routes.read import router as read_router
 
 app = FastAPI()
 
-app.include_router(router)
+app.include_router(create_router)
+app.include_router(read_router)
 
 @app.get("/health")
 async def read_root():
