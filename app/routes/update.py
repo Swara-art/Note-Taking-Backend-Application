@@ -8,7 +8,6 @@ router = APIRouter()
 
 @router.put("/update_notes/{note_id}")
 def update_note(note_id: str, title: str = None, content: str = None):
-
     if not ObjectId.is_valid(note_id):
         raise HTTPException(status_code=400, detail="Invalid note ID format")
 
