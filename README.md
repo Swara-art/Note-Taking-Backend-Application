@@ -80,32 +80,32 @@ git clone https://github.com/Swara-art/Note-Taking-Backend-Application
 
 ### 2️⃣ Create a virtual environment
 ```
--python -m venv venv
--source venv/bin/activate
+python -m venv venv
+source venv/bin/activate
 ```
 
 ### 3️⃣ Install dependencies
 ```
--pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ### 4️⃣ Run the FastAPI server
 ```
--uvicorn main: app --reload
+uvicorn main: app --reload
 ```
 
 ### 📘 API Documentation
 ```
--Once the server is running, open your browser and visit:
--Swagger UI:
--http://127.0.0.1:8000/docs
+Once the server is running, open your browser and visit:
+Swagger UI:
+http://127.0.0.1:8000/docs
 ```
 
 ### 👩‍💻 Author
 
--Swara Deshpande
--Computer Science Student
--Backend Developer (FastAPI, MongoDB)
+Swara Deshpande
+Computer Science Student
+Backend Developer (FastAPI, MongoDB)
 
 ### 📜 License
 
