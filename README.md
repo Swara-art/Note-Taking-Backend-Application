@@ -76,7 +76,7 @@ Each note contains the following fields:
 ### 1️⃣ Clone the repository
 ```bash
 git clone [https://github.com/your-username/note-taking-backend.git](https://github.com/Swara-art/Note-Taking-Backend-Application)
-
+```
 ### 2️⃣ Create a virtual environment
 -python -m venv venv
 -source venv/bin/activate
@@ -84,7 +84,7 @@ git clone [https://github.com/your-username/note-taking-backend.git](https://git
 ### 3️⃣ Install dependencies
 -pip install -r requirements.txt
 
-### 5️⃣ Run the FastAPI server
+### 4️⃣ Run the FastAPI server
 -uvicorn main: app --reload
 
 ### 📘 API Documentation
