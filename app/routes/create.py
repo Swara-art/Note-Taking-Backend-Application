@@ -7,7 +7,7 @@ from data.database import notes_collection
 router = APIRouter()
 
 @router.post("/notes")
-def create_note(note: NoteCreate):
+async def create_note(note: NoteCreate):
     new_note = {
         "title": note.title,
         "content": note.content,
@@ -15,7 +15,7 @@ def create_note(note: NoteCreate):
         "updated_at": datetime.utcnow()
     }
 
-    result = notes_collection.insert_one(new_note)
+    result = await notes_collection.insert_one(new_note)
 
     return {
         "message": "Note created successfully",

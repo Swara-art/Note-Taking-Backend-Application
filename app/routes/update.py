@@ -7,7 +7,7 @@ from data.database import notes_collection
 router = APIRouter()
 
 @router.put("/update_notes/{note_id}")
-def update_note(note_id: str, title: str = None, content: str = None):
+async def update_note(note_id: str, title: str = None, content: str = None):
     if not ObjectId.is_valid(note_id):
         raise HTTPException(status_code=400, detail="Invalid note ID format")
 
@@ -21,7 +21,7 @@ def update_note(note_id: str, title: str = None, content: str = None):
 
     updated_fields["updated_at"] = datetime.utcnow()
 
-    result = notes_collection.update_one(
+    result = await notes_collection.update_one(
         {"_id": ObjectId(note_id)},
         {"$set": updated_fields}
     )

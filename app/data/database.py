@@ -1,10 +1,12 @@
-from pymongo import MongoClient
+# I want to use aynchronous programming with MongoDB, so I will use the Motor library, which is an asynchronous driver for MongoDB.
+import motor.motor_asyncio
+from motor.motor_asyncio import AsyncIOMotorClient
+
 import os
 
-MONGODB_URI = os.getenv("MONGODB_URI")
-DB_NAME = os.getenv("DB_NAME")
-COLLECTION = os.getenv("COLLECTION")
+client = AsyncIOMotorClient(os.getenv("MONGODB_URI"))
+db = client[os.getenv("DB_NAME")]
+notes_collection = db[(os.getenv("COLLECTION"))]
 
-client = MongoClient(MONGODB_URI)
-database = client[DB_NAME]
-notes_collection = database[COLLECTION]
+
+
