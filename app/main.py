@@ -1,6 +1,5 @@
 from dotenv import load_dotenv
 load_dotenv()
-
 from fastapi import FastAPI
 from routes.auth import router as auth_router
 from routes.notes import router as notes_router
